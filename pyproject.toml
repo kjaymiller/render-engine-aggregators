@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools_scm", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "Render Engine Aggregators"
+name = "render_engine_aggregators"
 dynamic = ["version"]
 description = "aggregate multiple collections"
 readme = "README.md"
