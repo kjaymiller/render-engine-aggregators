@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools", "setuptools_scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Render Engine Aggregators"
+dynamic = ["version"]
+description = "aggregate multiple collections"
+readme = "README.md"
+
+dependencies = [
+    "render-engine"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+    "black",
+]
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+"*" = ["*.html", "*.txt", "*.xml", "*.md"]
+
+
+[tool.semantic_release]
+version_toml = "pyproject.toml:project.version"
+branch = "main"
+
+[tool.ruff]
+select = ["E", "F", "I", "UP"]
+target-version = "py311"
+line-length = 120
+src = ["src"]
+
+[tool.black]
+target-version =  ["py311"]
+line-length = 120
