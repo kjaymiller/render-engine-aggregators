@@ -1,14 +1,13 @@
 import itertools
-import more_itertools
-import typing 
 
 from render_engine.feeds import RSSFeed
+
 
 class AggregateFeed(RSSFeed):
     collections: list
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
 
         if not self.collections:
             raise ValueError("No collections provided") 
