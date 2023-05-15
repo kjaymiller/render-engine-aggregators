@@ -1,9 +1,10 @@
 import itertools
 
 from render_engine.feeds import RSSFeed
+from render_engine.page import Page
 
 
-class AggregateFeed(RSSFeed):
+class AggregateFeed(RSSFeed, Page):
     collections: list
 
     def __init__(self, **kwargs):

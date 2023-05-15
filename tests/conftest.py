@@ -27,4 +27,4 @@ def aggregated_feed():
         collections = [Collection1, Collection2]
 
 
-    return AggregateFeed1()
+    return AggregateFeed1
