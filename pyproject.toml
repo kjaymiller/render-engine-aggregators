@@ -28,7 +28,6 @@ package-dir = {"" = "src"}
 [tool.setuptools.package-data]
 "*" = ["*.html", "*.txt", "*.xml", "*.md"]
 
-
 [tool.semantic_release]
 version_toml = "pyproject.toml:project.version"
 branch = "main"
@@ -42,3 +41,6 @@ src = ["src"]
 [tool.black]
 target-version =  ["py311"]
 line-length = 120
+
+[tool.pytest]
+project_paths = ["src"]
