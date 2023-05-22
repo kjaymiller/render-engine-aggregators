@@ -60,7 +60,7 @@ render-engine==2023.5.1
     # via render-engine-aggregators (pyproject.toml)
 rich==13.3.5
     # via render-engine
-ruff==0.0.267
+ruff==0.0.269
     # via render-engine-aggregators (pyproject.toml)
 six==1.16.0
     # via python-dateutil
