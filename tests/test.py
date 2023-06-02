@@ -12,3 +12,4 @@ def test_page_loads_in_site(aggregated_feed):
     site = Site()
     site.page(aggregated_feed)
     assert aggregated_feed()._slug in site._route_list
+    

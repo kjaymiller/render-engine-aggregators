@@ -14,5 +14,5 @@ class AggregateFeed(RSSFeed, Page):
             raise ValueError("No collections provided") 
 
         self.pages = itertools.chain.from_iterable(
-            map(lambda x:x().__iter__(), self.collections)
+            map(lambda x:x.__iter__(), self.collections)
         )

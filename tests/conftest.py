@@ -1,26 +1,33 @@
 import pytest
 from render_engine.collection import Collection
+from render_engine.blog import Blog
 from render_engine.page import Page
 from src.render_engine_aggregators.feed import AggregateFeed
 
 
 @pytest.fixture()
-def aggregated_feed():
+def aggregated_feed(tmp_path):
+
+    path = tmp_path / "content"
+    path.mkdir()
+    post = path / "page2.md"
+    content = """---
+title: page2
+---
+
+page2"""
+    post.write_text(content)
 
     class page1(Page):
         content = "page1"
-
-
-    class page2(Page):
-        content = "page2"
 
 
     class Collection1(Collection):
         pages = [page1()]
 
 
-    class Collection2(Collection):
-        pages = [page2()]
+    class Collection2(Blog):
+        content_path = str(path)
 
 
     class AggregateFeed1(AggregateFeed):

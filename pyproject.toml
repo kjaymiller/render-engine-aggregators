@@ -9,7 +9,7 @@ description = "aggregate multiple collections"
 readme = "README.md"
 
 dependencies = [
-    "render-engine"
+    "render-engine>=2023.6.1"
 ]
 
 [project.optional-dependencies]
