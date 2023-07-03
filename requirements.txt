@@ -72,5 +72,5 @@ typer==0.9.0
     # via
     #   dtyper
     #   render-engine
-typing-extensions==4.5.0
+typing-extensions==4.7.1
     # via typer
